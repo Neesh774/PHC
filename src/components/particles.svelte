@@ -179,7 +179,7 @@
 				},
 				value: {
 					min: 0.1,
-					max: 0.5
+					max: 0.4
 				},
 				animation: {
 					count: 0,

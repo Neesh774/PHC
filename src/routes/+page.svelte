@@ -62,7 +62,10 @@
 		}
 	</style>
 	<div class="content">
-		<h1 class="title">Pomperaug Hack Club</h1>
+		<div>
+			<h1 class="title">Pomperaug Hack Club</h1>
+			<h3>Meetings on Wednesdays until 3:30</h3>
+		</div>
 		<button class="join cta lg">Join</button>
 	</div>
 </div>
@@ -108,7 +111,7 @@
 	</section>
 	<section class="cta">
 		<div class="content">
-			<h1>We can't wait to see <br /> what you make.</h1>
+			<h1>We can't wait to see <br /> what you'll make.</h1>
 			<button class="outline lg">JOIN NOW</button>
 		</div>
 	</section>
@@ -141,7 +144,7 @@
 	}
 	.hero {
 		width: 100%;
-		height: 80%;
+		height: 90%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -160,12 +163,20 @@
 		animation-fill-mode: forwards;
 	}
 
+	.hero .content div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 1rem;
+		color: #e5e5e5;
+	}
+
 	.title {
 		z-index: 10;
 		font-size: 3rem;
 		text-align: center;
 		font-family: 'Secular One', sans-serif;
-		color: #e5e5e5;
 	}
 
 	.join {
@@ -269,6 +280,12 @@
 		background-color: white;
 	}
 
+	@media (max-width: 1024px) {
+		.sections section div.text {
+			padding: 2rem 2rem;
+		}
+	}
+
 	@media (max-width: 768px) {
 		.sections section {
 			flex-direction: column;
@@ -286,6 +303,10 @@
 
 		iframe {
 			height: 14rem;
+		}
+
+		.cta h1 {
+			font-size: 2em;
 		}
 	}
 </style>
