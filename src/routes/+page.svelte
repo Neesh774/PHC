@@ -14,7 +14,7 @@
 	>
 	<div class="content">
 		<h1 class="title">Pomperaug Hack Club</h1>
-		<button class="join cta">Join Now</button>
+		<button class="join cta lg">Join Now</button>
 	</div>
 </div>
 <div class="sections">
@@ -57,9 +57,13 @@
 			</p>
 		</div>
 	</section>
-	<div class="cta">
-		<h1 />
-	</div>
+	<section class="cta">
+		<h1>
+			Discover the
+			<span class="highlight-secondary">joy of code.</span>
+		</h1>
+		<button class="cta lg">JOIN NOW</button>
+	</section>
 </div>
 
 <style>
@@ -185,6 +189,31 @@
 		padding-left: 18px;
 		padding-right: 18px;
 		margin-left: 2rem;
+	}
+
+	.highlight-secondary {
+		box-sizing: border-box;
+		margin: 0;
+		min-width: 0;
+		border-radius: 8px;
+		padding-left: 12px;
+		padding-right: 12px;
+		margin-left: -8px;
+		white-space: wrap;
+		color: var(--white);
+		background-color: #6f31b7;
+	}
+
+	.sections .cta {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+	}
+
+	.cta h1 {
+		font-size: 4em;
 	}
 
 	@media (max-width: 768px) {
