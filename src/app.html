@@ -8,7 +8,11 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800;900&family=Secular+One&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Raleway:wght@400;500;700;800;900&family=Secular+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/gh/hackclub/css@79ee8661dfe9ab17af7d35cd8d9d7373029a8919/theme.css"
 			rel="stylesheet"
 		/>
 	</head>
@@ -21,13 +25,14 @@
 			box-sizing: border-box;
 			margin: 0;
 			padding: 0;
-			font-family: 'Raleway', sans-serif;
+			font-family: 'Raleway';
 		}
-		h1,
-		h2,
-		h3,
-		h4 {
-			font-family: 'Secular One', sans-serif;
+		h1 {
+			font-size: 2.5em;
+			font-weight: var(--font-weight-bold);
+		}
+		p {
+			font-size: 22px;
 		}
 		body {
 			margin: 0;
@@ -38,12 +43,6 @@
 		html,
 		#container {
 			height: 100vh;
-		}
-
-		:root {
-			--background: 28, 22, 41;
-			--tw-ring-offset-shadow: 0 0 #0000;
-			--tw-ring-shadow: 0 0 #0000;
 		}
 	</style>
 </html>
