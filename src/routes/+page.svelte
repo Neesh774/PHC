@@ -44,11 +44,12 @@
 		<div class="text">
 			<h1>Can I Join?</h1>
 			<p>
-				<i> This club is only for coders with more than 6 years of experience.</i>
-				<br /> <br />
-				Just kidding. We're open to <b>all</b> students, regardless of experience or grade. You can come
-				around to any meetings and hang around, and we'll makes sure that everyone new to hacking gets
-				a fun introduction.
+				<i> This club is only for coders with more than 10 years of experience.</i>
+				<br />
+				<br />
+				<span class="highlight-secondary">Just kidding.</span> We're open to
+				<b>all</b> students, regardless of experience or grade. You can come around to any meetings and
+				hang around, and we'll makes sure that everyone new to coding gets a fun introduction.
 			</p>
 		</div>
 	</section>
@@ -179,6 +180,14 @@
 		padding-left: 18px;
 		padding-right: 18px;
 		margin-left: 2rem;
+	}
+
+	.highlight-secondary {
+		color: var(--orange);
+		font-weight: var(--font-weight-heading);
+		letter-spacing: var(--letter-spacing-headline);
+		margin-top: var(--spacing-0);
+		margin-bottom: var(--spacing-2);
 	}
 
 	.sections .cta {
