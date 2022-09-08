@@ -14,7 +14,7 @@
 	>
 	<div class="content">
 		<h1 class="title">Pomperaug Hack Club</h1>
-		<button class="join cta lg">Join Now</button>
+		<button class="join cta lg">Join</button>
 	</div>
 </div>
 <div class="sections">
@@ -58,11 +58,10 @@
 		</div>
 	</section>
 	<section class="cta">
-		<h1>
-			Discover the
-			<span class="highlight-secondary">joy of code.</span>
-		</h1>
-		<button class="cta lg">JOIN NOW</button>
+		<div class="content">
+			<h1>We can't wait to see <br /> what you make.</h1>
+			<button class="outline lg">JOIN NOW</button>
+		</div>
 	</section>
 </div>
 
@@ -173,14 +172,14 @@
 		font-family: 'Cabin';
 		font-weight: bold;
 		font-size: 2rem;
-		color: rgb(228, 45, 66);
+		color: var(--red);
 	}
 
 	.highlight {
 		box-sizing: border-box;
 		margin: 0;
 		min-width: 0;
-		background-color: rgb(228, 115, 45);
+		background-color: var(--primary);
 		-webkit-clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
 		clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
 		color: rgb(255, 255, 255);
@@ -191,19 +190,6 @@
 		margin-left: 2rem;
 	}
 
-	.highlight-secondary {
-		box-sizing: border-box;
-		margin: 0;
-		min-width: 0;
-		border-radius: 8px;
-		padding-left: 12px;
-		padding-right: 12px;
-		margin-left: -8px;
-		white-space: wrap;
-		color: var(--white);
-		background-color: #6f31b7;
-	}
-
 	.sections .cta {
 		display: flex;
 		flex-direction: column;
@@ -212,8 +198,26 @@
 		margin: auto;
 	}
 
+	.cta .content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: radial-gradient(at left top, rgb(255, 140, 55), rgb(236, 55, 80));
+		border-radius: 16px;
+		max-width: 90%;
+		padding: 2rem 4rem;
+		gap: 2rem;
+		color: var(--white);
+	}
+
 	.cta h1 {
-		font-size: 4em;
+		font-size: 3em;
+		text-align: center;
+	}
+
+	.cta button {
+		background-color: white;
 	}
 
 	@media (max-width: 768px) {
