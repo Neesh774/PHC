@@ -12,8 +12,10 @@
 			alt="Hack Club"
 		/></a
 	>
-	<h1 class="title">Pomperaug Hack Club</h1>
-	<button class="join cta">Join Now</button>
+	<div class="content">
+		<h1 class="title">Pomperaug Hack Club</h1>
+		<button class="join cta">Join Now</button>
+	</div>
 </div>
 <div class="sections">
 	<section>
@@ -66,6 +68,19 @@
 			transform: rotate(-5deg);
 		}
 	}
+
+	@keyframes fadeIn {
+		0% {
+			transform: translateY(-40px);
+		}
+		80% {
+			opacity: 1;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
 	.logo {
 		transform-origin: 0% 0%;
 	}
@@ -80,6 +95,17 @@
 		align-items: center;
 		flex-direction: column;
 		gap: 2rem;
+	}
+
+	.hero .content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 2rem;
+		opacity: 0;
+		animation: fadeIn 1s ease-out;
+		animation-fill-mode: forwards;
 	}
 
 	.title {
@@ -173,7 +199,7 @@
 
 		.sections section div.media {
 			width: 100%;
-			padding: 0 2rem;
+			padding: 4rem 2rem;
 		}
 
 		iframe {
