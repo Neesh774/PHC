@@ -28,8 +28,6 @@
 <slot />
 <footer>
 	<span><a href="mailto:kkancharla@region15.org">KKancharla@region15.org</a></span>
-	<span>Room 428</span>
-	<span>Mr. McGee</span>
 </footer>
 
 <style>
@@ -83,6 +81,7 @@
 		color: white;
 		padding: 0 8rem;
 		font-weight: bold;
+		margin: auto;
 	}
 
 	@media (max-width: 768px) {
