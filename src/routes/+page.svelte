@@ -165,6 +165,8 @@
 		font-weight: bold;
 		font-size: 2rem;
 		color: var(--red);
+		pointer-events: none;
+		user-select: none;
 	}
 
 	.highlight {
