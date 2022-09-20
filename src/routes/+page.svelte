@@ -19,7 +19,7 @@
 			<p>
 				The Pomperaug Hack Club is an upcoming club of coders interested in making the world a
 				better place using code, whether that's using websites, apps, or even games. We're also a
-				chapter of the international non-profit <a href="https://hackcclub.com">Hack Club</a>. We
+				chapter of the international non-profit <a href="https://hackclub.com">Hack Club</a>. We
 				don't
 				<a href="https://en.wikipedia.org/wiki/Hacker_culture">"hack"</a>, but we're gonna make
 				awesome projects like this website!
