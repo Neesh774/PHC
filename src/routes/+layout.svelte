@@ -27,6 +27,8 @@
 </a>
 <slot />
 <footer>
+	<span>Mrs. Kleinschmidt</span>
+	<span>First and Third Wednesday of each month</span>
 	<span><a href="mailto:kkancharla@region15.org">KKancharla@region15.org</a></span>
 </footer>
 

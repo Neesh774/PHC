@@ -1,5 +1,27 @@
 <script lang="ts">
 	import Particles from '../components/particles.svelte';
+
+	// meetings on first and third wednesday of the month
+	const nextMeeting = new Date();
+	nextMeeting.setDate(1);
+	while (nextMeeting.getDay() !== 3) {
+		nextMeeting.setDate(nextMeeting.getDate() + 1);
+	}
+	if (nextMeeting.getDate() > 15) {
+		nextMeeting.setDate(15);
+		nextMeeting.setMonth(nextMeeting.getMonth() + 1);
+		while (nextMeeting.getDay() !== 3) {
+			nextMeeting.setDate(nextMeeting.getDate() + 1);
+		}
+	}
+	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+	var nextMeetingString =
+		days[nextMeeting.getDay()] +
+		', ' +
+		months[nextMeeting.getMonth()] +
+		' ' +
+		nextMeeting.getDate();
 </script>
 
 <div class="hero">
@@ -7,7 +29,12 @@
 	<div class="content">
 		<div>
 			<h1 class="title">Pomperaug Hack Club</h1>
-			<h3>Meetings on Wednesdays until 3:30</h3>
+			<div>
+				<span style="color: var(--muted); font-size: 1.3rem;" class="eyebrow">Next Meeting </span>
+				<h2>
+					<span style="color: var(--primary)">{nextMeetingString}</span>
+				</h2>
+			</div>
 		</div>
 		<button class="join cta lg">Join</button>
 	</div>
@@ -95,13 +122,21 @@
 		animation-fill-mode: forwards;
 	}
 
-	.hero .content div {
+	.hero .content > div {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		gap: 1rem;
+		gap: 2rem;
 		color: #e5e5e5;
+	}
+
+	.hero .content > div > div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 0.2rem;
 	}
 
 	.title {
