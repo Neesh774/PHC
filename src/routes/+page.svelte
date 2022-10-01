@@ -14,6 +14,13 @@
 			nextMeeting.setDate(nextMeeting.getDate() + 1);
 		}
 	}
+	// if date is before october 19, 2022, then it's the first meeting
+	if (nextMeeting.getTime() < new Date(2022, 9, 19).getTime()) {
+		nextMeeting.setDate(19);
+		nextMeeting.setMonth(9);
+		nextMeeting.setFullYear(2022);
+	}
+
 	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	var nextMeetingString =
