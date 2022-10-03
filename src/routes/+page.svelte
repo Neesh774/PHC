@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Particles from '../components/particles.svelte';
-
 	// meetings on first and third wednesday of the month
 	const nextMeeting = new Date();
 	nextMeeting.setDate(1);
@@ -43,7 +42,9 @@
 				</h2>
 			</div>
 		</div>
-		<button class="join cta lg">Join</button>
+		<a href="https://classroom.google.com/c/Mzk5OTc2NDQxOTda?cjc=nr7htv7"
+			><button class="join cta lg">Join</button></a
+		>
 	</div>
 </div>
 <div class="sections">
