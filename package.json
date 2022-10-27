@@ -30,6 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@notionhq/client": "^2.2.1",
 		"svelte-particles": "^2.2.4",
 		"tsparticles": "^2.2.4"
 	}

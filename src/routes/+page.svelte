@@ -1,33 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import Particles from '../components/particles.svelte';
-	// meetings on first and third wednesday of the month
-	const nextMeeting = new Date();
-	nextMeeting.setDate(1);
-	while (nextMeeting.getDay() !== 3) {
-		nextMeeting.setDate(nextMeeting.getDate() + 1);
-	}
-	if (nextMeeting.getDate() > 15) {
-		nextMeeting.setDate(15);
-		nextMeeting.setMonth(nextMeeting.getMonth() + 1);
-		while (nextMeeting.getDay() !== 3) {
-			nextMeeting.setDate(nextMeeting.getDate() + 1);
-		}
-	}
-	// if date is before october 19, 2022, then it's the first meeting
-	if (nextMeeting.getTime() < new Date(2022, 9, 19).getTime()) {
-		nextMeeting.setDate(19);
-		nextMeeting.setMonth(9);
-		nextMeeting.setFullYear(2022);
-	}
-
-	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-	var nextMeetingString =
-		days[nextMeeting.getDay()] +
-		', ' +
-		months[nextMeeting.getMonth()] +
-		' ' +
-		nextMeeting.getDate();
 </script>
 
 <div class="hero">
@@ -36,9 +9,11 @@
 		<div>
 			<h1 class="title">Pomperaug Hack Club</h1>
 			<div>
-				<span style="color: var(--muted); font-size: 1.3rem;" class="eyebrow">Next Meeting </span>
+				<span style="color: var(--muted); font-size: 1.3rem;" class="eyebrow">Next Meeting</span>
 				<h2>
-					<span style="color: var(--primary)">{nextMeetingString}</span>
+					<span style="color: var(--primary)">
+						{$page.data.msg}
+					</span>
 				</h2>
 			</div>
 		</div>
