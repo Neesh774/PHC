@@ -50,7 +50,10 @@ export const load: PageServerLoad = async () => {
             const day = parseInt(str[2]);
             const year = parseInt(str[0]);
 
-            const date = new Date(year, month, day);
+            const date = new Date();
+            date.setFullYear(year);
+            date.setUTCMonth(month);
+            date.setUTCDate(day);
 
             const months = [
                 'January',
@@ -66,9 +69,9 @@ export const load: PageServerLoad = async () => {
                 'November',
                 'December'
             ];
-            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',];
 
-            nextMeeting = `${days[date.getDay()]}, ${months[date.getMonth() - 1]} ${date.getDate()}`;
+            nextMeeting = `${days[date.getDate()]}, ${months[date.getMonth() - 1]} ${date.getDate()}`;
         }
     }
 
