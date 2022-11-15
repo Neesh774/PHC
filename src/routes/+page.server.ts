@@ -69,9 +69,8 @@ export const load: PageServerLoad = async () => {
                 'November',
                 'December'
             ];
-            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',];
-
-            nextMeeting = `${days[date.getDate()]}, ${months[date.getMonth() - 1]} ${date.getDate()}`;
+            const days = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+            nextMeeting = `${days[date.getDay() - 1]}, ${months[date.getMonth() - 1]} ${date.getDate()}`;
         }
     }
 
